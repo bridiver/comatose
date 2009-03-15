@@ -37,7 +37,8 @@ module Comatose
     attr_accessor_with_default :helpers,              []
     attr_accessor_with_default :includes,             []
     attr_accessor_with_default :allow_import_export,  true
-
+    attr_accessor :secret
+    
     # 'Blockable' setters
     blockable_attr_accessor    :authorization
     blockable_attr_accessor    :admin_authorization

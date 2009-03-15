@@ -1,7 +1,9 @@
 # The controller for serving cms content...
 class ComatoseAdminController < ActionController::Base
   unloadable
-    
+
+  protect_from_forgery :secret => Comatose.config.secret unless Comatose.config.secret.blank?
+  
   define_option :original_template_root, nil
   define_option :plugin_layout_path, File.join( '..', '..', '..', 'vendor', 'plugins', 'comatose', 'views', 'layouts' )
 
